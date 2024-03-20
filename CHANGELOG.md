@@ -3,9 +3,10 @@
 ## [1.1.0] - 2024-03-20
 
 Add jest matchers:
-  - toBeBigNumberString()
-  - toEqualBigNumberString()
-  - toBeBigNumberNaNString()
+
+- toBeBigNumberString()
+- toEqualBigNumberString()
+- toBeBigNumberNaNString()
 
 ## [1.0.0] - 2024-03-06
 
