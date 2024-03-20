@@ -24,8 +24,14 @@ import * as matchers from '@potentia/bignumber/jest'
 expect.extend(matchers)
 
 expect(toBigNumber(0)).toBeBigNumber()
-expect(0n).toBeBigNumber()
+expect(0n).not.toBeBigNumber() // 0n is not of type BigNumber
 expect(0).not.toBeBigNumber() // 0 is not of type BigNumber
+
+expect('0').toBeBigNumberString()
+expect('123.456').toBeBigNumberString()
+expect('Infinity').toBeBigNumberString()
+expect(0).not.toBeBigNumberString() // 0 is not of type string
+expect(0n).not.toBeBigNumberString() // 0n is not of type string
 
 expect(toBigNumber(0)).toEqualBigNumber(0)
 expect(toBigNumber(0)).toEqualBigNumber('0')
@@ -36,8 +42,18 @@ expect(toBigNumber(Infinity)).toEqualBigNumber(Infinity)
 expect(toBigNumber(-Infinity)).toEqualBigNumber(-Infinity)
 expect(toBigNumber(NaN)).not.toEqualBigNumber(NaN) // NaN !== NaN
 
+expect('0').toEqualBigNumberString(0)
+expect('123.456').toEqualBigNumberString(123.456)
+expect('Infinity').toEqualBigNumberString(Infinity)
+expect(0).not.toEqualBigNumberString(0) // 0 is not of type string
+expect(0n).not.toEqualBigNumberString(0) // 0n is not of type string
+
 expect(toBigNumber()).toBeBigNumberNaN()
 expect(toBigNumber(NaN)).toBeBigNumberNaN()
 expect(toBigNumber('foobar')).toBeBigNumberNaN()
 expect(0).not.toBeBigNumberNaN() // 0 is not of type BigNumber
+
+expect('NaN').toBeBigNumberNaNString()
+expect('foobar').not.toBeBigNumberNaNString()
+expect(0).not.toBeBigNumberNaNString() // 0 is not of type string
 ```
