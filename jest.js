@@ -30,7 +30,8 @@ export function toEqualBigNumberString(received, expected) {
     const { isNot, promise } = this;
     const comment = 'BigNumber string type and optional value equality';
     const options = { comment, isNot, promise };
-    const pass = typeof received === 'string' && toBigNumber(received).eq(toBigNumber(expected));
+    const pass = typeof received === 'string' &&
+        toBigNumber(received).eq(toBigNumber(expected));
     const message = getMessage(pass, matcherHint('toEqualBigNumberString', undefined, undefined, options), printReceived(received), printExpected(toBigNumber(expected).toFixed()));
     return { message, pass };
 }

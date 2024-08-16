@@ -1,5 +1,5 @@
-import BigNumber from 'bignumber.js';
-export { default as BigNumber } from 'bignumber.js';
+import { BigNumber } from 'bignumber.js';
+export { BigNumber } from 'bignumber.js';
 declare const inspect: unique symbol;
 declare module 'bignumber.js' {
     interface BigNumber {

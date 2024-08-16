@@ -1,4 +1,3 @@
-/// <reference types="jest" />
 interface CustomMatchers<R = unknown> {
     toBeBigNumber: (this: unknown) => R;
     toBeBigNumberString: (this: unknown) => R;
