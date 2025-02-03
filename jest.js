@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { BigNumber, toBigNumber } from './type.js';
 import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils';
 export function toBeBigNumber(received) {
