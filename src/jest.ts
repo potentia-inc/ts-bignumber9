@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 
 import { BigNumber, toBigNumber } from './type.js'
 import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
@@ -15,9 +14,11 @@ interface CustomMatchers<R = unknown> {
 
 declare global {
   namespace jest {
+    /* eslint-disable @typescript-eslint/no-empty-object-type */
     interface Expect extends CustomMatchers {}
     interface Matchers<R> extends CustomMatchers<R> {}
     interface InverseAsymmetricMatchers extends CustomMatchers {}
+    /* eslint-enable @typescript-eslint/no-empty-object-type */
   }
 }
 
