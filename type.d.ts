@@ -1,11 +1,4 @@
-import { BigNumber } from 'bignumber.js';
-export { BigNumber } from 'bignumber.js';
-declare const inspect: unique symbol;
-declare module 'bignumber.js' {
-    interface BigNumber {
-        [Symbol.toPrimitive]: (hint: string) => number | string;
-        [inspect]: () => string;
-    }
-}
+import BigNumber from 'bignumber.js';
+export { BigNumber };
 export declare function toBigNumber(x?: unknown): BigNumber;
 export declare function toBigNumberOrNil(x?: unknown): BigNumber | undefined;
