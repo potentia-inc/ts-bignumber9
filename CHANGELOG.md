@@ -1,5 +1,9 @@
 # Change log
 
+## [2.1.0] - 2025-04-15
+
+Disable the module extension for console.log pretty print, etc.
+
 ## [2.0.0] - 2025-02-03
 
 Upgrade to node-22
