@@ -1,5 +1,10 @@
 # Change log
 
+## [2.2.0] - 2025-11-18
+
+- Support node>=24
+- Prefer node test runner instead of jest
+
 ## [2.1.0] - 2025-04-15
 
 Disable the module extension for console.log pretty print, etc.
